@@ -28,7 +28,7 @@ def discriminative_s(
         # print(svm_scores)
         # 给svm分数矩阵 根据排序 记录每个节点的名次
         order_matrix = np.ones((length, length))
-        index_order = np.argsort(svm_scores, axis=1)
+        index_order = np.argsort(svm_scores*-1, axis=1)
 
     # 这个循环能优化吗？
     for i in range(length):
